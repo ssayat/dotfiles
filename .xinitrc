@@ -51,8 +51,17 @@ fi
 xrandr --auto
 
 
-feh --bg-scale $HOME/.config/wallpapers/fav/aes.jpg
+# feh --bg-scale /home/akira/.config/wallpapers/fav/anime_white.jpg
+# feh --bg-scale /home/akira/.config/wallpapers/fav/japanese.png
+# feh --bg-scale /home/akira/.config/wallpapers/fav/wallpaper-white.png
+feh --bg-scale /home/akira/.config/wallpapers/fav/aes.jpg
 # wal -R &
 
-picom &
+# Add this to your .xinitrc or whatever file starts programs on startup.
+# wal -i "$(< "${HOME}/.cache/wal/wal")"
+
+picom --daemon &
+# dwmblocks &
+sxhkd &
+exec slstatus &
 exec dwm
