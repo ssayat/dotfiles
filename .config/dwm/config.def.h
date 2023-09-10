@@ -21,7 +21,7 @@ static const int systraypinningfailfirst = 0; /* 0 for default behavior */
 static const unsigned int systrayspacing = 2; /* Adjust spacing between icons */
 static const unsigned int systrayiconsize = 16; /* Adjust the icon size as needed */
 
-#include "/home/akira/.config/wal/templates/wallpaper-white-colors.h"
+#include "/home/akira/.config/wal/templates/japanese-colors.h"
 
 
 
