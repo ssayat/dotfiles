@@ -2,9 +2,9 @@ import:
   #   - ~/.config/alacritty/catppuccin-mocha.yml
   # - ~/.config/alacritty/alacritty-colorscheme/themes/breeze.yaml
   # - ~/.config/alacritty/alacritty-colorscheme/themes/ayu_dark.yaml
-  - ~/.config/alacritty/default/aes.yml
+  # - ~/.config/alacritty/default/aes.yml
   # - ~/.config/alacritty/default/anime_white.yml
-  # - ~/.config/alacritty/default/japanese.yml
+  - ~/.config/alacritty/default/japanese.yml
   # - ~/.config/alacritty/default/wallpaper-white.yml
 
 window:
