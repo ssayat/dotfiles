@@ -1,15 +1,17 @@
+import:
+  #   - ~/.config/alacritty/catppuccin-mocha.yml
+  # - ~/.config/alacritty/alacritty-colorscheme/themes/breeze.yaml
+  # - ~/.config/alacritty/alacritty-colorscheme/themes/ayu_dark.yaml
+  - ~/.config/alacritty/default/aes.yml
+  # - ~/.config/alacritty/default/anime_white.yml
+  # - ~/.config/alacritty/default/japanese.yml
+  # - ~/.config/alacritty/default/wallpaper-white.yml
+
 window:
   padding:
     x: 12
     y: 12
-  class:
-    instance: Alacritty
-    general: Alacritty
   opacity: 0.8
-
-scrolling:
-  history: 10000
-  multiplier: 3
 
 font:
   normal:
@@ -27,14 +29,9 @@ font:
   size: 8
 draw_bold_text_with_bright_colors: true
 
-import:
-  #   - ~/.config/alacritty/catppuccin-mocha.yml
-  # - ~/.config/alacritty/alacritty-colorscheme/themes/breeze.yaml
-  # - ~/.config/alacritty/alacritty-colorscheme/themes/ayu_dark.yaml
-  - ~/.config/alacritty/default/aes.yml
-  # - ~/.config/alacritty/default/anime_white.yml
-  # - ~/.config/alacritty/default/japanese.yml
-  # - ~/.config/alacritty/default/wallpaper-white.yml
+scrolling:
+  history: 10000
+  multiplier: 3
 
 shell:
   program: /usr/bin/zsh
