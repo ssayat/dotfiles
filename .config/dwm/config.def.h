@@ -13,7 +13,17 @@ static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#44454a";
-#include "/home/akira/.config/wal/templates/aes-colors.h"
+
+static const int showsystray = 1; /* 0 means no systray */
+static const int systrayonleft = 0; /* 0 for right, 1 for left */
+static const int systraypinning = 0; /* 0 for default behavior */
+static const int systraypinningfailfirst = 0; /* 0 for default behavior */
+static const unsigned int systrayspacing = 2; /* Adjust spacing between icons */
+static const unsigned int systrayiconsize = 16; /* Adjust the icon size as needed */
+
+#include "/home/akira/.config/wal/templates/wallpaper-white-colors.h"
+
+
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
@@ -59,7 +69,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
-static const char *roficmd[]  = { "rofi", "-show", "run", NULL };
+static const char *roficmd[] = { "rofi", "-show", "drun", "-show-icons", NULL };
 static const char *flamcmd[]  = { "flameshot", "gui", NULL };
 static const char *filemg[]  = { "nemo", NULL };
 
@@ -106,8 +116,8 @@ static const Key keys[] = {
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
 static const Button buttons[] = {
 	/* click                event mask      button          function        argument */
-	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
-	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
+	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
+	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
 	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
