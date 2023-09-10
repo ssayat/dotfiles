@@ -1,0 +1,41 @@
+# Alacritty Configuration File
+#
+# See https://github.com/alacritty/alacritty/wiki/Configuration for more
+# options and documentation.
+
+# Colors (using hex codes)
+colors:
+  # Default colors
+  primary:
+    background: '#0a0b0a'
+    foreground: '#eae4e3'
+
+  # Normal colors
+  normal:
+    black:   '#0a0b0a'
+    red:     '#9C9274'
+    green:   '#767F8F'
+    yellow:  '#A59E9B'
+    blue:    '#C7BAB4'
+    magenta: '#C7C2C0'
+    cyan:    '#D5CDD0'
+    white:   '#eae4e3'
+
+  # Bright colors
+  bright:
+    black:   '#a39f9e'
+    red:     '#9C9274'
+    green:   '#767F8F'
+    yellow:  '#A59E9B'
+    blue:    '#C7BAB4'
+    magenta: '#C7C2C0'
+    cyan:    '#D5CDD0'
+    white:   '#eae4e3'
+
+# Font configuration (change this to your preferred font)
+font:
+  size: 14.0
+  family: Monaco, monospace
+
+# Additional Alacritty configurations can be added here as needed.
+
