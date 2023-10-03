@@ -71,6 +71,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *roficmd[] = { "rofi", "-show", "drun", "-show-icons", NULL };
 static const char *flamcmd[]  = { "flameshot", "gui", NULL };
+static const char *flamfcmd[]  = { "flameshot", "full" , "-c", "-p", "~/Pictures/screenshots", NULL };
 static const char *filemg[]  = { "nemo", NULL };
 
 static const Key keys[] = {
@@ -78,6 +79,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_p,      spawn,          {.v = roficmd } },
 	{ MODKEY,             			XK_Return, spawn,          {.v = termcmd } },
 	{ 0,             				XK_Print,  spawn,          {.v = flamcmd } },
+	{ ShiftMask,             		XK_Print,  spawn,          {.v = flamfcmd } },
 	{ MODKEY,             			XK_e,	   spawn,          {.v = filemg } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
