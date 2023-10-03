@@ -73,14 +73,24 @@ static const char *roficmd[] = { "rofi", "-show", "drun", "-show-icons", NULL };
 static const char *flamcmd[]  = { "flameshot", "gui", NULL };
 static const char *flamfcmd[]  = { "flameshot", "full" , "-c", "-p", "~/Pictures/screenshots", NULL };
 static const char *filemg[]  = { "nemo", NULL };
+static const char *browser[]  = { "librewolf", NULL };
+static const char *startmus[]  = { "mocp", "-p", NULL };
+static const char *stopmus[]  = { "mocp", "-s", NULL };
+static const char *nextmus[]  = { "mocp", "-f", NULL };
+static const char *prevmus[]  = { "mocp", "-r", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = roficmd } },
+	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = browser } },
 	{ MODKEY,             			XK_Return, spawn,          {.v = termcmd } },
 	{ 0,             				XK_Print,  spawn,          {.v = flamcmd } },
 	{ ShiftMask,             		XK_Print,  spawn,          {.v = flamfcmd } },
 	{ MODKEY,             			XK_e,	   spawn,          {.v = filemg } },
+	{ MODKEY,             			XK_s,	   spawn,          {.v = startmus } },
+	{ MODKEY|ShiftMask,             XK_e,	   spawn,          {.v = stopmus } },
+	{ MODKEY,             			XK_n,	   spawn,          {.v = nextmus } },
+	{ MODKEY|ShiftMask,             XK_n,	   spawn,          {.v = prevmus } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
