@@ -21,7 +21,7 @@ static const int systraypinningfailfirst = 0; /* 0 for default behavior */
 static const unsigned int systrayspacing = 2; /* Adjust spacing between icons */
 static const unsigned int systrayiconsize = 16; /* Adjust the icon size as needed */
 
-#include "/home/akira/.config/wal/templates/japanese-colors.h"
+#include "/home/akira/.config/wal/templates/aes-colors.h"
 
 
 
@@ -88,7 +88,7 @@ static const Key keys[] = {
 	{ ShiftMask,             		XK_Print,  spawn,          {.v = flamfcmd } },
 	{ MODKEY,             			XK_e,	   spawn,          {.v = filemg } },
 	{ MODKEY,             			XK_s,	   spawn,          {.v = startmus } },
-	{ MODKEY|ShiftMask,             XK_e,	   spawn,          {.v = stopmus } },
+	{ MODKEY|ShiftMask,             XK_s,	   spawn,          {.v = stopmus } },
 	{ MODKEY,             			XK_n,	   spawn,          {.v = nextmus } },
 	{ MODKEY|ShiftMask,             XK_n,	   spawn,          {.v = prevmus } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
