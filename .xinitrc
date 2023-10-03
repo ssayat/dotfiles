@@ -50,7 +50,6 @@ fi
 
 xrandr --auto
 
-
 # feh --bg-scale /home/akira/.config/wallpapers/fav/anime_white.jpg
 feh --bg-scale /home/akira/.config/wallpapers/fav/japanese.png
 # feh --bg-scale /home/akira/.config/wallpapers/fav/wallpaper-white.png
@@ -60,7 +59,11 @@ feh --bg-scale /home/akira/.config/wallpapers/fav/japanese.png
 # Add this to your .xinitrc or whatever file starts programs on startup.
 # wal -i "$(< "${HOME}/.cache/wal/wal")"
 
-picom --daemon &
+mocp -S 
+# mocp -o shuffle
+mocp -p ~/Music/autostart
+picom -b --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffnes 350
+# picom --daemon &
 # dwmblocks &
 sxhkd &
 exec slstatus &
