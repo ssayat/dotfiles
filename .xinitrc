@@ -62,7 +62,7 @@ feh --bg-scale /home/akira/.config/wallpapers/fav/japanese.png
 mocp -S 
 # mocp -o shuffle
 mocp -p ~/Music/autostart
-picom -b --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffnes 350
+picom -b --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffnes 150
 # picom --daemon &
 # dwmblocks &
 sxhkd &
