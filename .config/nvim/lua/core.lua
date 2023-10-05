@@ -8,7 +8,7 @@ vim.cmd('set mousehide')
 vim.cmd('set nowrap')
 vim.cmd('set nocompatible')
 vim.cmd('syntax on')
-
+vim.cmd('set clipboard=unnamed')
 
 vim.cmd('set background=dark')
 -- vim.cmd('colorscheme PaperColor')
