@@ -3,7 +3,7 @@ my setup information
 
 * OS: [Arch Linux](https://archlinux.org/download/)
 * Terminal: [alacritty](https://github.com/alacritty/alacritty)
-* WM: [dwm](https://dwm.suckless.org/)
+* WM: [dwm](https://dwm.suckless.org/), [dwm-flexipatch](https://github.com/bakkeby/dwm-flexipatch)
 * Shell: [zsh](https://www.zsh.org/)
 * Compositor: [picom](https://github.com/Arian8j2/picom)
 * Theme: [Adwaita-Dark](https://www.gnome-look.org/p/1014995/)
