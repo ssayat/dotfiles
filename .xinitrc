@@ -49,6 +49,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 xrandr --auto
+xset r rate 200 25
 
 # feh --bg-scale /home/akira/.config/wallpapers/fav/anime_white.jpg
 feh --bg-scale /home/akira/.config/wallpapers/fav/japanese.png
@@ -59,11 +60,15 @@ feh --bg-scale /home/akira/.config/wallpapers/fav/japanese.png
 # Add this to your .xinitrc or whatever file starts programs on startup.
 # wal -i "$(< "${HOME}/.cache/wal/wal")"
 
+
 mocp -S 
 # mocp -o shuffle
-mocp -p ~/Music/autostart
-picom -b --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffnes 150
-# picom --daemon &
+# mocp -p ~/Music/autostart
+
+# picom -b --experimental-backends --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffnes 150 &
+# picom -b --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffnes 150 &
+# picom --experimental-backend &
+picom &
 # dwmblocks &
 sxhkd &
 exec slstatus &
