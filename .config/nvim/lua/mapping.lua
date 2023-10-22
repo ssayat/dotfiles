@@ -1,3 +1,6 @@
+--vim.api.nvim_set_keymap('i', '}', '}', { noremap = true })
+
+
 vim.g.mapleader = ','
 
 vim.api.nvim_set_keymap('n', '<leader>ne', ':NERDTreeToggle<cr>', { noremap = true, silent = true })
@@ -9,14 +12,15 @@ vim.api.nvim_set_keymap('n', '<silent><A-j>', ':set paste<CR>m`o<Esc>``:set nopa
 vim.api.nvim_set_keymap('n', '<silent><A-k>', ':set paste<CR>m`O<Esc>``:set nopaste<CR>', { noremap = true })
 vim.cmd('set shortmess=a')
 
+--nnoremap("<C-u>", "<C-u>zz")
+--nnoremap("<C-d>", "<C-d>zz")
+
 
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
-
-
 
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }

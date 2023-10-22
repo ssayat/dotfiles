@@ -13,12 +13,13 @@ require('packer').startup(function(use)
     use 'vim-airline/vim-airline-themes'
     use 'cocopon/iceberg.vim'
     use 'NLKNguyen/papercolor-theme'
-    use 'dense-analysis/ale'
+    --use 'dense-analysis/ale'
     use {'junegunn/fzf', run = function() vim.fn['fzf#install']() end}
     use 'dylanaraps/wal.vim'
     use 'sheerun/vim-polyglot'
     use 'folke/tokyonight.nvim'
     use 'rebelot/kanagawa.nvim'
+    use { "catppuccin/nvim", as = "catppuccin" }
 
     use 'hrsh7th/vim-vsnip'
     use 'hrsh7th/vim-vsnip-integ'
@@ -44,3 +45,16 @@ require('packer').startup(function(use)
   requires = { {'nvim-lua/plenary.nvim'} }
 }
 end)
+
+--require'nvim-treesitter.configs'.setup {
+--  highlight = {
+--    enable = true,
+--    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+--    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+--    -- Using this option may slow down your editor, and you may see some duplicate highlights.
+--    -- Instead of true it can also be a list of languages
+--    additional_vim_regex_highlighting = false,
+--  },
+--}
+
+require('leap').add_default_mappings()
