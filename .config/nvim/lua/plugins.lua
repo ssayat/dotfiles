@@ -1,4 +1,5 @@
 -- Plugin management with Packer.nvim
+--lua require'colorizer'.setup()
 require('packer').startup(function(use)
     use 'preservim/nerdtree'
     -- use 'sheerun/vim-polyglot'
@@ -24,7 +25,9 @@ require('packer').startup(function(use)
     use 'hrsh7th/vim-vsnip'
     use 'hrsh7th/vim-vsnip-integ'
     use 'neovim/nvim-lspconfig'
-
+    use 'christoomey/vim-tmux-navigator'
+    use 'norcalli/nvim-colorizer.lua'
+    use 'nvim-tree/nvim-tree.lua'
     -- nvim-cmp
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
@@ -45,7 +48,6 @@ require('packer').startup(function(use)
   requires = { {'nvim-lua/plenary.nvim'} }
 }
 end)
-
 --require'nvim-treesitter.configs'.setup {
 --  highlight = {
 --    enable = true,

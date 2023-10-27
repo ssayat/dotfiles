@@ -3,17 +3,28 @@
 
 vim.g.mapleader = ','
 
-vim.api.nvim_set_keymap('n', '<leader>ne', ':NERDTreeToggle<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>r', ':NERDTreeFind<cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>ne', ':NvimTreeToggle<cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>r', ':NvimTreeFindFile<cr>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', ',<space>', ':nohlsearch<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<silent><C-j>', "m`:silent +g/\\m^\\s*$/d<CR>``:noh<CR>", { noremap = true })
-vim.api.nvim_set_keymap('n', '<silent><C-k>', "m`:silent -g/\\m^\\s*$/d<CR>``:noh<CR>", { noremap = true })
-vim.api.nvim_set_keymap('n', '<silent><A-j>', ':set paste<CR>m`o<Esc>``:set nopaste<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<silent><A-k>', ':set paste<CR>m`O<Esc>``:set nopaste<CR>', { noremap = true })
+--vim.api.nvim_set_keymap('n', '<silent><C-j>', "m`:silent +g/\\m^\\s*$/d<CR>``:noh<CR>", { noremap = true })
+--vim.api.nvim_set_keymap('n', '<silent><C-k>', "m`:silent -g/\\m^\\s*$/d<CR>``:noh<CR>", { noremap = true })
+--vim.api.nvim_set_keymap('n', '<silent><A-j>', ':set paste<CR>m`o<Esc>``:set nopaste<CR>', { noremap = true })
+--vim.api.nvim_set_keymap('n', '<silent><A-k>', ':set paste<CR>m`O<Esc>``:set nopaste<CR>', { noremap = true })
 vim.cmd('set shortmess=a')
 
 --nnoremap("<C-u>", "<C-u>zz")
 --nnoremap("<C-d>", "<C-d>zz")
+
+local tmux_vi = {}
+
+tmux_vi.general = {
+  n = {
+    ["<C-h>"] = { "<cmd> TmuxNavigateLeft<CR>", "window left" },
+    ["<C-l>"] = { "<cmd> TmuxNavigateRight<CR>", "window right" },
+    ["<C-j>"] = { "<cmd> TmuxNavigateDown<CR>", "window down" },
+    ["<C-k>"] = { "<cmd> TmuxNavigateUp<CR>", "window up" },
+  }
+}
 
 
 local builtin = require('telescope.builtin')
