@@ -41,7 +41,10 @@ require('packer').startup(function(use)
     use 'nvim-tree/nvim-web-devicons' -- OPTIONAL: for file icons
     use 'lewis6991/gitsigns.nvim' -- OPTIONAL: for git status
     use 'romgrk/barbar.nvim'
-
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
     use {
   'nvim-telescope/telescope.nvim', tag = '0.1.2',
 -- or                            , branch = '0.1.x',
@@ -58,5 +61,3 @@ end)
 --    additional_vim_regex_highlighting = false,
 --  },
 --}
-
-require('leap').add_default_mappings()
