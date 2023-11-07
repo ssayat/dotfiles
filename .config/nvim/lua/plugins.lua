@@ -21,13 +21,13 @@ require('packer').startup(function(use)
     use 'folke/tokyonight.nvim'
     use 'rebelot/kanagawa.nvim'
     use { "catppuccin/nvim", as = "catppuccin" }
-
     use 'hrsh7th/vim-vsnip'
     use 'hrsh7th/vim-vsnip-integ'
     use 'neovim/nvim-lspconfig'
     use 'christoomey/vim-tmux-navigator'
     use 'norcalli/nvim-colorizer.lua'
     use 'nvim-tree/nvim-tree.lua'
+    use 'lukas-reineke/indent-blankline.nvim'
     -- nvim-cmp
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
@@ -51,6 +51,7 @@ require('packer').startup(function(use)
   requires = { {'nvim-lua/plenary.nvim'} }
 }
 end)
+
 --require'nvim-treesitter.configs'.setup {
 --  highlight = {
 --    enable = true,

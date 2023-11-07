@@ -3,8 +3,9 @@
 
 vim.g.mapleader = ','
 
-vim.api.nvim_set_keymap('n', '<leader>ne', ':NvimTreeToggle<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>r', ':NvimTreeFindFile<cr>', { noremap = true, silent = true })
+--vim.api.nvim_set_keymap('n', '<leader>ne', ':NvimTreeToggle<cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>ne', ':NvimTreeFindFileToggle<cr>zz', { noremap = true, silent = true })
+--vim.api.nvim_set_keymap('n', '<leader>r', ':NvimTreeFindFileToggle<cr>zz', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', ',<space>', ':nohlsearch<CR>', { noremap = true })
 --vim.api.nvim_set_keymap('n', '<silent><C-j>', "m`:silent +g/\\m^\\s*$/d<CR>``:noh<CR>", { noremap = true })
 --vim.api.nvim_set_keymap('n', '<silent><C-k>', "m`:silent -g/\\m^\\s*$/d<CR>``:noh<CR>", { noremap = true })
