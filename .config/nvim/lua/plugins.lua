@@ -10,8 +10,6 @@ require('packer').startup(function(use)
     use 'jiangmiao/auto-pairs'
     use 'gabrielelana/vim-markdown'
     use 'tpope/vim-surround'
-    --use 'vim-airline/vim-airline'
-    --use 'vim-airline/vim-airline-themes'
     use 'cocopon/iceberg.vim'
     use 'NLKNguyen/papercolor-theme'
     --use 'dense-analysis/ale'
@@ -32,6 +30,7 @@ require('packer').startup(function(use)
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
+    use 'nathom/filetype.nvim'
     -- nvim-cmp
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'

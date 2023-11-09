@@ -9,7 +9,6 @@ vim.cmd('set nowrap')
 vim.cmd('set nocompatible')
 vim.cmd('syntax on')
 vim.cmd('set clipboard+=unnamedplus')
-
 vim.cmd('set background=dark')
 
 --vim.cmd('colorscheme PaperColor')
@@ -19,6 +18,7 @@ vim.cmd('colorscheme tokyonight-night')
 --vim.cmd('colorscheme catppuccin')
 --colorscheme catppuccin " catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
 vim.cmd('set laststatus=2')
+vim.loader.enable()
 --opt.ignorecase = true
 --opt.smartcase = true
 
