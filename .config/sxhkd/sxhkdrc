@@ -1,9 +1,9 @@
 # Brightness
 alt + Left
-    brillo -U 10
+    brillo -U 5
 
 alt + Right
-    brillo -A 10
+    brillo -A 5
 
 
 # Volume
