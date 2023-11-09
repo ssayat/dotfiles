@@ -10,8 +10,8 @@ require('packer').startup(function(use)
     use 'jiangmiao/auto-pairs'
     use 'gabrielelana/vim-markdown'
     use 'tpope/vim-surround'
-    use 'vim-airline/vim-airline'
-    use 'vim-airline/vim-airline-themes'
+    --use 'vim-airline/vim-airline'
+    --use 'vim-airline/vim-airline-themes'
     use 'cocopon/iceberg.vim'
     use 'NLKNguyen/papercolor-theme'
     --use 'dense-analysis/ale'
@@ -28,6 +28,10 @@ require('packer').startup(function(use)
     use 'norcalli/nvim-colorizer.lua'
     use 'nvim-tree/nvim-tree.lua'
     use 'lukas-reineke/indent-blankline.nvim'
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
     -- nvim-cmp
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'

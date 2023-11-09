@@ -35,3 +35,5 @@ require("ibl").setup()
 --require("ibl").setup({
 --    scope = false,
 --  })
+
+require('lualine').setup()
