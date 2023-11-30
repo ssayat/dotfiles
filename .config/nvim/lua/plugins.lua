@@ -1,7 +1,6 @@
 -- Plugin management with Packer.nvim
 --lua require'colorizer'.setup()
 require('packer').startup(function(use)
-    use 'preservim/nerdtree'
     -- use 'sheerun/vim-polyglot'
     use 'prabirshrestha/vim-lsp'
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
@@ -31,6 +30,12 @@ require('packer').startup(function(use)
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
     use 'nathom/filetype.nvim'
+    use 'mfussenegger/nvim-dap'
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+    --
+    use 'ThePrimeagen/vim-be-good'
+    --
+    --
     -- nvim-cmp
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'

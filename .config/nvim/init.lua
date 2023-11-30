@@ -1,4 +1,4 @@
 require("base")
-require("core")
+require("config")
 require("plugins")
 require("mapping")
