@@ -22,7 +22,7 @@ require("nvim-tree").setup({
     dotfiles = false,
   },
 })
--- Attaches to every FileType mode
+
 require ('colorizer').setup()
 require('lualine').setup()
 
@@ -39,7 +39,6 @@ end
 local highlight = {
   "Whitespace"
 }
---require("ibl").setup()
 require("ibl").setup {
     indent = { highlight = highlight, char = "▏" },
     whitespace = {

@@ -1,28 +1,20 @@
-vim.cmd('set number')
-vim.cmd('set relativenumber')
-vim.cmd('set tabstop=4')
-vim.cmd('set shiftwidth=4')
-vim.cmd('set autoindent')
-vim.cmd('set smartindent')
-vim.cmd('set mousehide')
-vim.cmd('set nowrap')
-vim.cmd('set nocompatible')
-vim.cmd('syntax on')
-vim.cmd('set clipboard+=unnamedplus')
-vim.cmd('set background=dark')
-
---vim.cmd('colorscheme PaperColor')
---vim.cmd('colorscheme iceberg')
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.autoindent = true
+vim.opt.smartindent = true
+vim.opt.mousehide = true
+vim.opt.wrap = false
+vim.opt.background = 'dark'
+vim.opt.cursorline = true
+vim.opt.cursorlineopt = 'number'
+vim.opt.syntax = 'on'
+vim.opt.clipboard:append('unnamedplus')
 vim.cmd('colorscheme tokyonight-night')
---vim.cmd('colorscheme kanagawa')
---vim.cmd('colorscheme catppuccin')
---colorscheme catppuccin " catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
-vim.cmd('set laststatus=2')
+vim.opt.laststatus = 2
 vim.loader.enable()
---opt.ignorecase = true
---opt.smartcase = true
-
 
 vim.g.ale_sign_error = '!!'
 vim.g.ale_sign_warning = '--'
-vim.g.ale_linters = {python = {'flake8'}, cpp = {'clang'}}
+vim.g.ale_linters = { python = {'flake8'}, cpp = {'clang'} }
