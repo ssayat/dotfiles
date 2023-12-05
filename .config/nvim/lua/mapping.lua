@@ -3,7 +3,9 @@ local map = vim.api.nvim_set_keymap
 vim.g.mapleader = ','
 
 map('n', '<leader>ne', ':NvimTreeFindFileToggle<cr>zz', { noremap = true, silent = true })
-map('n', ',<space>', ':nohlsearch<CR>', { noremap = true })
+map('n', ',<space>', ':nohlsearch<CR>', { noremap = true, silent = true })
+map('n', '<leader>v', ':vsplit<enter>', { noremap = true, silent = true })
+map('n', '<leader>h', ':split<enter>', { noremap = true, silent = true })
 map('n', '<C-u>', '<C-u>zz', { noremap = true })
 map('n', '<C-d>', '<C-d>zz', { noremap = true })
 
