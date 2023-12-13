@@ -36,7 +36,6 @@ require('packer').startup(function(use)
     -- For vsnip users.
     use 'hrsh7th/cmp-vsnip'
     use 'windwp/nvim-autopairs'
-        --config = function() require("nvim-autopairs").setup {} end
     use {
   'nvim-telescope/telescope.nvim', tag = '0.1.2',
   requires = { {'nvim-lua/plenary.nvim'} }
