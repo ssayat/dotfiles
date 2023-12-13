@@ -2,7 +2,6 @@ require('packer').startup(function(use)
     use 'prabirshrestha/vim-lsp'
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
     use 'ggandor/leap.nvim'
-    use 'jiangmiao/auto-pairs'
     use 'gabrielelana/vim-markdown'
     use 'tpope/vim-surround'
     use 'cocopon/iceberg.vim'
@@ -21,15 +20,12 @@ require('packer').startup(function(use)
     use 'nvim-tree/nvim-tree.lua'
     use 'lukas-reineke/indent-blankline.nvim'
     use 'nvim-tree/nvim-web-devicons' 
-    use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-    }
+    use 'nvim-lualine/lualine.nvim'
     use 'lewis6991/gitsigns.nvim'
     use 'romgrk/barbar.nvim'
     use 'nathom/filetype.nvim'
     use 'mfussenegger/nvim-dap'
-    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+    use 'rcarriga/nvim-dap-ui'
     use 'ThePrimeagen/vim-be-good'
     -- nvim-cmp
     use 'hrsh7th/cmp-nvim-lsp'
@@ -39,10 +35,8 @@ require('packer').startup(function(use)
     use 'hrsh7th/nvim-cmp'
     -- For vsnip users.
     use 'hrsh7th/cmp-vsnip'
-    use {
-        "windwp/nvim-autopairs",
-        config = function() require("nvim-autopairs").setup {} end
-    }
+    use 'windwp/nvim-autopairs'
+        --config = function() require("nvim-autopairs").setup {} end
     use {
   'nvim-telescope/telescope.nvim', tag = '0.1.2',
   requires = { {'nvim-lua/plenary.nvim'} }

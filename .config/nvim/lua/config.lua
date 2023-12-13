@@ -1,4 +1,7 @@
 require'nvim-treesitter.configs'.setup {
+  ensure_installed = { "c", "cpp", "python", "rust", "java", "lua", "javascript", "typescript" },
+  sync_install = false,
+  auto_install = true,
   highlight = {
     enable = true,
     additional_vim_regex_highlighting = false,
@@ -6,6 +9,8 @@ require'nvim-treesitter.configs'.setup {
 }
 
 require('leap').add_default_mappings()
+
+require('nvim-autopairs').setup()
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
