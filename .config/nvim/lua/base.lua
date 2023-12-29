@@ -11,7 +11,8 @@ vim.opt.cursorline = true
 vim.opt.cursorlineopt = 'number'
 vim.opt.syntax = 'on'
 vim.opt.clipboard:append('unnamedplus')
-vim.cmd('colorscheme tokyonight-night')
+--vim.cmd('colorscheme tokyonight-night')
+vim.cmd('colorscheme kanagawa')
 vim.opt.laststatus = 2
 vim.loader.enable()
 

@@ -1,16 +1,12 @@
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = { "c", "cpp", "python", "rust", "java", "lua", "javascript", "typescript" },
+  ensure_installed = { "c", "cpp", "python", "rust", "java", "bash", "lua", "javascript", "typescript" },
   sync_install = false,
-  auto_install = true,
+  auto_install = false,
   highlight = {
     enable = true,
     additional_vim_regex_highlighting = false,
   },
 }
-
-require('leap').add_default_mappings()
-
-require('nvim-autopairs').setup()
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
@@ -28,8 +24,6 @@ require("nvim-tree").setup({
   },
 })
 
-require ('colorizer').setup()
-require('lualine').setup()
 
 require("dapui").setup()
 local dap = require('dap')
@@ -52,3 +46,9 @@ require("ibl").setup {
     },
     scope = { enabled = false },
 }
+
+--require("nvim-surround").setup()
+require('leap').add_default_mappings()
+require('nvim-autopairs').setup()
+require ('colorizer').setup()
+require('lualine').setup()
